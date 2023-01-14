@@ -16,7 +16,7 @@ const categoryRoute = require("./routes/category");
 app.use("/images", express.static(path.join(__dirname + "/images")));
 
 mongoose
-    .connect(process.env.MONGO_URL, {
+    .connect("mongodb+srv://omhardahamern:IWjxI9GKYcGtncjd@cluster0.tzwc2.mongodb.net/Node-React-blog?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
