@@ -14,7 +14,10 @@ const topRoute = require("./routes/top");
 const categoryRoute = require("./routes/category");
 
 app.use("/images", express.static(path.join(__dirname + "/images")));
-
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
 mongoose
     .connect("mongodb+srv://omhardahamern:IWjxI9GKYcGtncjd@cluster0.tzwc2.mongodb.net/Node-React-blog?retryWrites=true&w=majority", {
         useNewUrlParser: true,
